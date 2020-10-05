@@ -1,0 +1,21 @@
+
+@import './util.scss';
+
+a {
+    color: $primary;
+    text-decoration: none;
+}
+
+.form-control {
+    box-shadow: none;
+    border: 2px solid $gray;
+    
+    &:focus {
+        border: 2px solid $primary;
+    }
+}
+
+.btn {
+    box-shadow: none;
+}
+

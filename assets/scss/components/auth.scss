@@ -1,0 +1,911 @@
+
+@import '../util.scss';
+
+
+@mixin auth {
+
+    &__quote{
+        
+        height: auto;
+        padding: 1rem 2rem;
+        background: url('~assets/images/auth/pattern.png') center /cover;
+
+        &--img {
+            width : 100%;
+            margin-bottom: 2rem;
+
+            img {
+                width: 120px;
+            }
+        }
+
+        &--quote {
+
+            color: $white;
+            margin-bottom: 1rem;
+
+            span {
+
+                &.fas {
+                    font-size: 1rem;
+                    margin-bottom: 1.2rem;
+                }
+
+                &.author {
+                    font-size: .8rem;
+                    margin-top: 1.2rem;
+                }
+            }
+            
+            p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &--dots {
+
+            text-align: center;
+            
+            .dot {
+                position: relative;
+                background: $white;
+                display: inline-block;
+                margin-right: .6rem;
+                border-radius: 50%;
+                padding: .2rem;
+                width: 7px;
+                height: 7px;
+
+                &.active:after {
+                    border-radius: 50%;
+                    padding: .2rem;
+                    border: 1px solid $white;
+                    position: absolute;
+                    content: '';
+                    top: -4px;
+                    left: -4px;
+                    bottom: -4px;
+                    right: -4px;
+                }
+
+            }
+
+        }
+    }
+
+    &__actual{
+
+        height: auto;
+        padding: 2rem;
+
+        &--nav {
+                
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+            a {
+
+                color: $gray!important;
+                font-size: .8rem;
+
+                &:hover {
+                    color: $primary!important;
+                }
+            }
+
+            div {
+                
+                color: $gray!important;
+                span {
+                    font-size: .8rem;
+                    display: block;
+                }
+            }
+        }
+
+        &--header {
+            color: $dark;
+            margin-bottom: 2rem;
+
+            .title {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: .9rem;
+            }
+        }
+
+        &--content {
+                
+            .type {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem 1rem;
+                border-radius: 5px;
+                border: 2px solid transparent;
+                color: $dark!important;
+                margin-bottom: 2rem;
+
+                &:hover {
+                    cursor: pointer;
+                    border: 2px solid $primary;
+                    color: $primary!important;
+                }
+
+                span {
+
+                    display: block;
+
+                    &.fas {
+                        font-size: 1rem;
+                        color: $primary;
+                    }
+                }
+
+                div {
+                    margin: 0 1.5rem;
+
+                    h5 {
+                        font-size: 1rem;
+                    }
+                    
+                    p {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+
+        form {
+
+            @include form-group;
+            @include button;
+
+        }
+
+        &--footer {
+
+            .register {
+                color: $dark;
+                font-size: .9rem;
+                margin-top: 1rem;
+            }
+        }
+
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { 
+        &__quote{
+        
+            padding: 2rem 3rem;
+    
+            &--img {
+                margin-bottom: 3rem;
+    
+                img {
+                    width: 130px;
+                }
+            }
+
+        }
+    
+        &__actual{
+    
+            padding: 2rem 3rem;
+            max-width: 70%;
+            margin: 0 auto;
+
+        }
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { 
+        
+        &__quote{
+        
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+    
+            &--img {
+
+                margin-bottom: 0;
+    
+                img {
+                    width: 130px;
+                }
+            }
+    
+            &--quote {
+    
+                span {
+    
+                    &.fas {
+                        font-size: 1rem;
+                        margin-bottom: 1.2rem;
+                    }
+    
+                    &.author {
+                        font-size: .8rem;
+                        margin-top: 1.2rem;
+                    }
+
+                }
+                
+                p {
+                    font-size: 1rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    
+        &__actual{
+    
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 2rem;
+            max-width: 50%;
+            margin: 0 auto;
+    
+            &--header {
+
+                margin-bottom: 2rem;
+    
+                .title {
+                    font-size: 1.5rem;
+                }
+    
+                .subtitle {
+                    font-size: .9rem;
+                }
+            }
+
+            &--content {
+                
+                .type {
+    
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 2rem 1.5rem;
+                    border-radius: 5px;
+                    border: 2px solid transparent;
+                    color: $dark!important;
+                    margin-bottom: 2rem;
+    
+                    &:hover {
+                        cursor: pointer;
+                        border: 2px solid $primary;
+                        color: $primary!important;
+                    }
+    
+                    span {
+    
+                        display: block;
+    
+                        &.fas {
+                            font-size: 1.3rem;
+                            color: $primary;
+                        }
+                    }
+    
+                    div {
+                        margin: 0 1.7rem;
+                    }
+                }
+            }
+    
+        }
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { 
+         
+        &__quote{
+    
+            &--img {
+
+                margin-bottom: 0;
+    
+                img {
+                    width: 130px;
+                }
+            }
+    
+            &--quote {
+    
+                span {
+    
+                    &.fas {
+                        font-size: 1rem;
+                        margin-bottom: 1.2rem;
+                    }
+    
+                    &.author {
+                        font-size: .8rem;
+                        margin-top: 1.2rem;
+                    }
+
+                }
+                
+                p {
+                    font-size: 1rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    
+        &__actual{
+    
+            padding: 2rem;
+            max-width: 50%;
+            margin: 0 auto;
+    
+            &--header {
+
+                margin-bottom: 2rem;
+    
+                .title {
+                    font-size: 1.5rem;
+                }
+    
+                .subtitle {
+                    font-size: .9rem;
+                }
+            }
+    
+        }
+
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { 
+
+        &__quote{
+    
+            padding: 4rem;
+    
+            &--img {
+
+                margin-bottom: 0;
+    
+                img {
+                    width: 150px;
+                }
+            }
+    
+            &--quote {
+    
+                span {
+    
+                    &.fas {
+                        font-size: 1.2rem;
+                        margin-bottom: 1.2rem;
+                    }
+                    
+                    &.author {
+                        font-size: 1rem;
+                    }
+                    
+                }
+                
+                p {
+                    font-size: 1.5rem;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    
+        &__actual{
+    
+            padding: 2rem;
+            max-width: 500px;
+            margin: 0 auto;
+    
+            &--header {
+
+                margin-bottom: 2rem;
+    
+                .title {
+                    font-size: 1.7rem;
+                }
+    
+                .subtitle {
+                    font-size: 1rem;
+                }
+            }
+    
+        }
+    }
+
+
+}
+
+@mixin authRe {
+
+    &__quote{
+        
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4rem 6rem;
+        // background: url('~assets/images/auth/login_banner.jpg') center /cover;
+
+        &--img {
+            width : 100%;
+
+            img {
+                width: 180px;
+            }
+        }
+
+        &--quote {
+            color: #fff;
+
+            span {
+
+                &.fas {
+                    margin-bottom: 1.5rem;
+                    font-size: 1.3rem;
+                }
+
+                &.author {
+                    font-size: .8rem;
+                    margin-top: 1.5rem;
+                }
+            }
+            
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    &__actual{
+
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 3rem 15rem;
+
+        .header {
+
+            color: $dark;
+
+            .text {
+                font-size: 2rem;
+            }
+        }
+
+        form {
+
+            @include form-group;
+            @include button;
+
+            .forgot {
+                font-size: 1rem;
+                a {
+                    font-size: 1rem;
+                }
+            }
+
+        }
+
+        .footer {
+            .text {
+                color: $dark;
+                font-size: 1rem;
+            }
+        }
+
+    }
+
+
+
+@media only screen and (max-width: 576px) {
+    
+    &__quote{
+        
+        height: auto;
+        padding: 2rem;
+
+        &--img {
+
+            margin-bottom: 3rem;
+
+            img {
+                width: 130px;
+            }
+        }
+
+        &--quote {
+
+            span {
+
+                &.fas {
+                    margin-bottom: 1.2rem;
+                    font-size: 1rem;
+                }
+
+                &.author {
+                    font-size: .75rem;
+                }
+            }
+            
+            p {
+                font-size: 1rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__actual{
+
+        height: auto;
+        justify-content: space-around;
+        padding: 2rem;
+
+        .header {
+
+            margin-bottom: 2rem;
+
+            .text {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        form {
+
+            .forgot {
+                
+                font-size: .8rem;
+
+                a {
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        .footer {
+
+            margin-top: 2rem;
+
+            .text {
+                font-size: .8rem;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    
+    &__quote{
+        
+        height: auto;
+        padding: 2rem;
+
+        &--img {
+
+            margin-bottom: 3rem;
+
+            img {
+                width: 130px;
+            }
+        }
+
+        &--quote {
+
+            span {
+
+                &.fas {
+                    margin-bottom: 1.2rem;
+                    font-size: 1rem;
+                }
+
+                &.author {
+                    font-size: .75rem;
+                }
+            }
+            
+            p {
+                font-size: 1rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__actual{
+
+        height: auto;
+        justify-content: space-around;
+        padding: 2rem;
+
+        .header {
+
+            margin-bottom: 3rem;
+
+            .text {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        form {
+
+            .forgot {
+                font-size: .8rem;
+                a {
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        .footer {
+
+            margin-top: 2rem;
+
+            .text {
+                font-size: .8rem;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    &__quote{
+        
+        justify-content: space-between;
+        padding: 2rem;
+
+        &--img {
+
+            img {
+                width: 130px;
+            }
+        }
+
+        &--quote {
+
+            span {
+
+                &.fas {
+                    margin-bottom: 1.2rem;
+                    font-size: 1.2rem;
+                }
+
+                &.author {
+                    font-size: .8rem;
+                }
+            }
+            
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__actual{
+
+        height: auto;
+        justify-content: space-around;
+        padding: 2rem 4rem;
+
+        .header {
+
+            margin-bottom: 3rem;
+
+            .text {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        form {
+
+            .forgot {
+                font-size: .8rem;
+                a {
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        .footer {
+
+            margin-top: 2rem;
+
+            .text {
+                font-size: .8rem;
+            }
+        }
+
+    }
+    
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    
+    &__quote{
+        
+        padding: 3rem 4rem;
+
+        &--img {
+
+            img {
+                width: 140px;
+            }
+        }
+
+        &--quote {
+
+            span {
+
+                &.fas {
+                    margin-bottom: 1.2rem;
+                    font-size: 1.2rem;
+                }
+
+                &.author {
+                    font-size: .8rem;
+                }
+            }
+            
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__actual{
+
+        height: auto;
+        padding: 2rem 8rem;
+
+        .header {
+
+            margin-bottom: 3rem;
+
+            .text {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        form {
+
+            .forgot {
+                font-size: .8rem;
+                a {
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        .footer {
+
+            margin-top: 2rem;
+
+            .text {
+                font-size: .8rem;
+            }
+        }
+
+    }
+
+    
+}
+
+@media only screen and (min-width: 1921px){
+    
+    &__quote{
+        
+        padding: 6rem 10rem;
+
+        &--img {
+
+            img {
+                width: 200px;
+            }
+        }
+
+        &--quote {
+
+            span {
+
+                &.fas {
+                    margin-bottom: 2rem;
+                    font-size: 2.5rem;
+                }
+
+                &.author {
+                    font-size: 1.8rem;
+                }
+            }
+            
+            p {
+                font-size: 3rem;
+                margin-bottom: 5rem;
+            }
+        }
+    }
+
+    &__actual{
+
+        padding: 2rem 18rem;
+
+        .header {
+
+            margin-bottom: 3rem;
+
+            .text {
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+
+        form {
+
+            .form-group {
+                
+                label {
+                    font-size: 1.5rem;
+                }
+
+                .form-control-lg {
+                    padding: .5rem 1rem;
+                    font-size: 2.5rem;
+                    line-height: 1.5;
+                }
+
+            }
+
+            .btn {
+                padding: 1.5rem;
+                font-size: 1.5rem;
+            }
+
+            .forgot {
+                font-size: 1.5rem;
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .footer {
+
+            margin-top: 2rem;
+
+            .text {
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+    
+}
+
+}

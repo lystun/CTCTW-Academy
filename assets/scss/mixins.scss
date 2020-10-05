@@ -1,0 +1,75 @@
+
+@import './util.scss';
+
+@mixin form-group {
+    
+    .form-group {
+
+        margin-bottom: 2rem;
+
+        label {
+            color: $primary;
+            font-size: .8rem;
+        }
+
+        .password {
+            position: relative;
+            top: -2rem;
+            right: 1.5rem;
+            float: right;
+            color: $gray;
+            cursor: pointer;
+        }
+    }
+}
+
+@mixin button {
+
+    .btn {
+        
+        position: relative;
+        background-color: $primary;
+        border: none;
+        color: $white;
+        padding: .75rem;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+            background: $dark;
+            color: $white;
+        }
+
+        &.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            pointer-events: auto;
+        }
+
+        &:after {
+            content: "";
+            background: $secondary;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s    
+        }
+
+        &:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+    }
+
+}
