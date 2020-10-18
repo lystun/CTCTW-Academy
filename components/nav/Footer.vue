@@ -80,6 +80,7 @@
                 a {
                     color: lightgray;
                     font-size: .9rem;
+                    text-decoration: none;
 
                     &:hover {
                         color: $primary;

@@ -30,7 +30,7 @@ export default {
 
     loading: {
         color: '#F34A00',
-        height: '5px',
+        height: '3px',
     },
 
     pageTransition: 'page',

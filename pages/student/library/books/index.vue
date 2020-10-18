@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+        <h1 class="h3 mb-4 text-gray-800">Library</h1>
 
         <div class="row">
-            
+            <div class="col-md-12"></div>
         </div>
 	</div>
 </template>
@@ -14,8 +14,7 @@
 
         data(){
             return {
-                title : 'Subjects | Children That Change the World',
-                    
+                title : 'Libarary - Books | Children That Change the World',
             }
         },
 
@@ -23,7 +22,7 @@
             return {
                 title: this.title,
                 meta: [
-                        { hid: 'description', name: 'ctctw', content: 'CTCTW equips students in underserved university communities like Ogbomoso with 21st-century relevant skills that will inspire innovation, creativity and invention.' }
+                    { hid: 'description', name: 'ctctw', content: 'CTCTW equips students in underserved university communities like Ogbomoso with 21st-century relevant skills that will inspire innovation, creativity and invention.' }
                 ]
             }
         },

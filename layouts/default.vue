@@ -11,8 +11,6 @@
     import Header from '@/components/nav/Header'
     import Footer from '@/components/nav/Footer'
 
-    
-
     export default {
         data(){
             return {
@@ -33,7 +31,7 @@
 </script>
 
 <style lang="scss">
-    body{
+    * {
         font-family: 'Rubik', sans-serif;
     }
 </style>
